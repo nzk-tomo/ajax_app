@@ -29,15 +29,10 @@ function memo(){
           ${item.content}
           </div>
         </div>`;
-        //listという要素に対して、insertAdjacentHTMLでHTMLを追加します。
-        //第一引数にafterendを指定することで、要素listの直後に挿入できます。
-        //つまり、list要素の一番上に上記HTMLの内容が加わる
-        // →見た目上ツイートメモの一番上に来るようになる
       list.insertAdjacentHTML("afterend", HTML);
       // このコードにより、「メモの入力フォームに入力されたままの文字」はリセットされます
       formText.value = "";
     };
-    //コントローラーのcreateアクションと、JavaScriptの処理が重複しているためprevent
     e.preventDefault();
   });
 }
